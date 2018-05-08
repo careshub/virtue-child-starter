@@ -7,14 +7,22 @@
 function virtue_child_arc_scripts() {
 	// Include the needed js file.
 	// wp_enqueue_script( 'virtue-child-arc-base-scripts', get_stylesheet_directory_uri( '/js/public.js' ), array( 'jquery' ), '1.0.1', true );
+}
+add_action( 'wp_enqueue_scripts', 'virtue_child_arc_scripts' );
 
+/**
+ * Avoid double Bootstrap enqueues if CARES Data Tools is active.
+ *
+ * @since 1.0.1
+ */
+function virtue_child_check_bootstrap() {
 	// If bootstrap has been enqueued, use the alternate version of the Virtue utilities scripts.
 	if ( wp_script_is( 'bootstrap-js', 'enqueued' ) || wp_script_is( 'bootstrap', 'enqueued' ) ) {
 		wp_dequeue_script( 'virtue_plugins' );
 		wp_enqueue_script( 'virtue-plugins-alt', get_stylesheet_directory_uri( '/js/virtue-alt-plugins.js' ), array( 'jquery' ), '1.0.1', true );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'virtue_child_arc_scripts', 999 );
+add_action( 'wp_enqueue_scripts', 'virtue_child_check_bootstrap', 999 );
 
 /**
  * Add the Google "noscript" tag immediately after the opening of the body element.
