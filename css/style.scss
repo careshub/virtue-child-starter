@@ -8,3 +8,10 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  virtue-child-cares
 */
+
+/* Don't apply box shadows to transparent images like pngs */
+img[class*="wp-image"][src*="png"] {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
