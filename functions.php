@@ -51,3 +51,18 @@ function cares_virt_child_add_google_tag_manager_script() {
 	<?php
 }
 // add_action( 'wp_head', 'cares_virt_child_add_google_tag_manager_script' );
+
+
+/**
+ * Include code specific to sites that use the Sugar Calendar plugin.
+ *
+ * @since 1.1.0
+ */
+function maybe_include_sugar_calendar_filters() {
+	$sc_version = defined( 'SC_PLUGIN_VERSION' ) ? SC_PLUGIN_VERSION : false;
+
+	if ( $sc_version ) {
+		include_once( plugin_dir_path( __FILE__ ) . 'functions-sugar-calendar.php' );
+	}
+}
+add_action( 'init', 'maybe_include_sugar_calendar_filters' );
