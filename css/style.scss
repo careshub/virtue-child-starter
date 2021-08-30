@@ -15,3 +15,70 @@ img[class*="wp-image"][src*="png"] {
     background: transparent;
     box-shadow: none;
 }
+
+/* Overrides for event list */
+article.sc_event {
+    padding-left:  1em;
+    .sc_event_date,
+    .sc_event_time {
+        color: #666;
+        font-family: Montserrat, Lato, sans-serif;
+        font-size: 1em;
+    }
+
+    .sc-date-start,
+    .sc_event_start_time time {
+        color: black;
+        font-weight:  500;
+    }
+}
+
+.sc_upcoming_events {
+    background: #f0f0f0;
+}
+
+.sc_events_list {
+    list-style: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.sc_event {
+    margin-top: 10px;
+}
+
+.sc_event:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+    /*margin-right: 20px;*/
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.sc_event_title {
+    font-size: 18px;
+}
+
+/* Overrides for event calendar on smaller devices */
+@media only screen and (max-width: 480px) {
+    #sc_events_calendar_head {
+        text-align: center;
+    }
+
+    #sc_event_nav_wrap {
+        display: inline;
+    }
+
+    #content .sc-table tr td {
+        padding-left: 5%;
+    }
+
+    #sc_calendar td {
+        font-size: 14px;
+    }
+}
+
+.sc_day_div a {
+    position: relative;
+    z-index: 9;
+}
