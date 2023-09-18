@@ -85,3 +85,56 @@ article.sc_event .sc_event_start_time time {
     position: relative;
     z-index: 9;
 }
+
+.cdt-extra-content {
+    padding: 12px 18px;
+    margin: 2em 0;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+.cdt-extra-content.type-equity-matters,
+.cdt-extra-content.type-place-matters,
+.cdt-extra-content.type-history-matters {
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+.cdt-extra-content.type-equity-matters .xcontent-block-header,
+.cdt-extra-content.type-place-matters .xcontent-block-header,
+.cdt-extra-content.type-history-matters .xcontent-block-header {
+    margin-top: -12px !important;
+    margin-left: -18px;
+    margin-bottom: .75em !important;
+    display: inline-block;
+    padding: .25em 2.5em .25em .6em;
+    color: white !important;
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+.cdt-extra-content.type-equity-matters {
+    border-color: #388557;
+}
+.cdt-extra-content.type-equity-matters .xcontent-block-header {
+    background: linear-gradient(to top left, transparent 50%, #388557 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, #388557 0.1%) no-repeat;
+    background-size: 15% 100%, 85% 100%;
+    background-position: 100% 0%, 0% 0%;
+}
+.cdt-extra-content.type-place-matters {
+    border-color: #680A1D;
+}
+.cdt-extra-content.type-place-matters .xcontent-block-header {
+    background: linear-gradient(to top left, transparent 50%, #680A1D 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, #680A1D 0.1%) no-repeat;
+    background-size: 15% 100%, 85% 100%;
+    background-position: 100% 0%, 0% 0%;
+}
+.cdt-extra-content.type-history-matters {
+    border-color: #14558F;
+}
+.cdt-extra-content.type-history-matters .xcontent-block-header {
+    background: linear-gradient(to top left, transparent 50%, #14558F 50%) no-repeat, linear-gradient(to top left, transparent 0.1%, #14558F 0.1%) no-repeat;
+    background-size: 15% 100%, 85% 100%;
+    background-position: 100% 0%, 0% 0%;
+}
+.cdt-extra-content.type-text .xcontent-block-header {
+/*    display: none;*/
+    font-size: 1.4em !important;
+}
