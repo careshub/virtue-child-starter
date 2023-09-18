@@ -7,12 +7,12 @@ if ( isset( $virtue[ 'blog_archive_full' ] ) && 'full' === $virtue[ 'blog_archiv
 	$summery 	= 'normal';
 	$postclass 	= 'postlist';
 }
-$virtue_sidebar = true;
-/**
-* @hooked virtue_page_title - 20
-*/
-do_action( 'virtue_page_title_container' );
-?>
+	$virtue_sidebar = true;
+	/**
+	* @hooked virtue_page_title - 20
+	*/
+	do_action( 'virtue_page_title_container' );
+	?>
 
 <div id="content" class="container">
 	<div class="row">
